@@ -1,0 +1,45 @@
+.grid-container{
+    display:grid;
+    grid-template-rows: 900px;
+    grid-gap: 5px;
+    grid-template-columns: 20% 15% 3% 1fr 20%;
+    grid-template-areas: 
+    ". profile . cards ."
+}
+
+.profile{
+    grid-area: profile;
+    display:grid;
+    grid-template-rows: 200px 1fr 1fr 1fr; 
+}
+.cards{
+    grid-area: cards;
+    display: grid;
+    grid-template-rows: repeat(3,300px);
+    grid-template-areas: 
+    "article1";
+}
+
+.article1{
+    display:grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-area: article1;
+    grid-template-areas: 
+    "article-head"
+    "article-para";
+}
+.article-head{
+    grid-area: article-head;
+
+}
+.article-para{
+    grid-area: article-para;
+}
+
+.logo img{
+    width: 100%;
+    margin-top: 35px;
+    max-width: 200px;
+}
+
+
